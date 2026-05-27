@@ -9,11 +9,14 @@ export default function Footer() {
           
           {/* Brand */}
           <div className="space-y-4 shadow-sm p-0 rounded-none bg-transparent">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-brand-700 font-bold text-xl">
-                BS
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-white rounded-2xl flex items-center justify-center text-brand-700 shadow-sm">
+                <Smile className="w-5 h-5" />
               </div>
-              <span className="font-heading font-bold text-2xl tracking-tight">Bright Smile</span>
+              <div>
+                <span className="block font-heading font-bold text-2xl tracking-tight">Bright Smile</span>
+                <span className="block text-sm text-brand-300">Dental Clinic</span>
+              </div>
             </div>
             <p className="text-brand-100 leading-relaxed max-w-sm">
               Providing premium, modern, and compassionate dental care for you and your whole family.

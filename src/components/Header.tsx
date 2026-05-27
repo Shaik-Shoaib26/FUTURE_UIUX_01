@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, Smile } from 'lucide-react';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -11,11 +11,14 @@ export default function Header() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                BS
+            <Link to="/" className="flex items-center gap-3">
+              <div className="w-12 h-12 bg-brand-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-brand-500/20">
+                <Smile className="w-6 h-6" />
               </div>
-              <span className="font-heading font-bold text-2xl text-brand-900 tracking-tight">Bright Smile</span>
+              <div className="leading-tight">
+                <span className="block font-heading font-bold text-2xl text-brand-900 tracking-tight">Bright Smile</span>
+                <span className="block text-sm text-gray-500 tracking-wide">Dental Clinic</span>
+              </div>
             </Link>
           </div>
 
