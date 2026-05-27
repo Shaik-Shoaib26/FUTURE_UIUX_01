@@ -41,7 +41,7 @@ export const SERVICES_DATA: Record<string, ServiceDetailData> = {
     id: "root-canal",
     title: "Root Canal Treatment",
     subtitle: "Painless root canal treatments by endodontic specialists to save your natural tooth.",
-    img: "https://images.unsplash.com/photo-1610312194726-9bc6ddf6d08e?auto=format&fit=crop&q=80&w=800",
+    img: "https://images.pexels.com/photos/4971514/pexels-photo-4971514.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     whatIsIt: "A root canal is a treatment to repair and save a badly damaged or infected tooth instead of removing it. The term 'root canal' comes from cleaning of the canals inside a tooth's root.",
     benefits: [
       "Saves your natural tooth",
