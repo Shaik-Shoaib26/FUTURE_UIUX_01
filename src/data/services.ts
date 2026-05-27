@@ -25,7 +25,7 @@ export const SERVICES_DATA: Record<string, ServiceDetailData> = {
       "Boosts your overall body health",
       "Saves money on future complex dental work"
     ],
-    price: "From $99 per session",
+    price: "Starting from ₹999 per session",
     faq: [
       { q: "Does teeth cleaning hurt?", a: "No, professional teeth cleaning is generally painless. You might feel some slight vibration and pressure during the scaling process." },
       { q: "How often should I get my teeth cleaned?", a: "We recommend a professional cleaning every six months for most patients, or every 3-4 months if you have a history of gum disease." }
@@ -51,7 +51,7 @@ export const SERVICES_DATA: Record<string, ServiceDetailData> = {
       "Restores normal chewing and biting",
       "Protects surrounding teeth from excess strain"
     ],
-    price: "From $600 - $1,200",
+    price: "Starting from ₹4,999",
     faq: [
       { q: "Are root canals painful?", a: "Thanks to modern anesthetics and techniques, root canals are now essentially painless, similar to getting a standard filling." },
       { q: "How long does a root canal take?", a: "Usually 60 to 90 minutes. Depending on the tooth, it might require one or two visits." }
@@ -77,7 +77,7 @@ export const SERVICES_DATA: Record<string, ServiceDetailData> = {
       "Boosts long-term self-confidence",
       "Reduces wear on natural teeth"
     ],
-    price: "Varies (Consultation Required)",
+    price: "Starting from ₹29,999",
     faq: [
       { q: "How long will I need to wear braces?", a: "Treatment typically lasts between 12 to 24 months, depending on the complexity of your specific case." },
       { q: "Are clear aligners better than traditional braces?", a: "Clear aligners are more discreet and removable, but traditional braces are sometimes necessary for more complex tooth movements. We will help you choose the best option." }
@@ -87,7 +87,7 @@ export const SERVICES_DATA: Record<string, ServiceDetailData> = {
     id: "teeth-whitening",
     title: "Teeth Whitening",
     subtitle: "Brighten your smile up to 8 shades in a single clinical session.",
-    img: "https://images.pexels.com/photos/16212691/pexels-photo-16212691.png?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    img: "https://images.unsplash.com/photo-1661457519725-1ca0863f5f8d?q=80&w=1200&auto=format&fit=crop",
     whatIsIt: "Professional teeth whitening utilizes safe, concentrated bleaching agents applied directly to your teeth, activated by an LED light to remove deep stains effectively and safely.",
     benefits: [
       "Immediate, visible results",
@@ -97,7 +97,7 @@ export const SERVICES_DATA: Record<string, ServiceDetailData> = {
       "Long-lasting brightness",
       "Enhances confidence and appearance"
     ],
-    price: "From $250",
+    price: "Starting from ₹6,999",
     faq: [
       { q: "Will whitening make my teeth sensitive?", a: "Some patients experience mild sensitivity for a day or two after the procedure, but it subsides quickly. We use desensitizing gels to minimize this." },
       { q: "How long do the results last?", a: "Results can last from 1 to 3 years, depending on your dietary habits and oral hygiene routine." }
@@ -117,7 +117,7 @@ export const SERVICES_DATA: Record<string, ServiceDetailData> = {
       "No slipping or clicking like dentures",
       "Protects adjacent healthy teeth"
     ],
-    price: "From $1,500 per implant",
+    price: "Starting from ₹24,999 per implant",
     faq: [
       { q: "Is the implant procedure painful?", a: "Most patients report that the procedure involves less discomfort than a tooth extraction. We use advanced local anesthesia." },
       { q: "How long do dental implants last?", a: "With proper oral care, the implant post can last a lifetime. The attached crown typically lasts 10-15 years." }
@@ -143,7 +143,7 @@ export const SERVICES_DATA: Record<string, ServiceDetailData> = {
       "Specialized gentle pediatric care",
       "Guidance for parents on home oral care"
     ],
-    price: "From $80 per checkup",
+    price: "Starting from ₹799 per checkup",
     faq: [
       { q: "When should I bring my child for their first visit?", a: "The AAPD recommends that a child visit a dentist within six months after the presence of their first tooth, or by their first birthday." },
       { q: "Are dental x-rays safe for children?", a: "Yes. With contemporary safeguards like lead aprons and high-speed digital film, the amount of radiation received is extremely small." }
