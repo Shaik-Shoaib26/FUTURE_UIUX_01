@@ -1,6 +1,17 @@
+import { FormEvent, useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Smile } from 'lucide-react';
 
 export default function Contact() {
+  const [successMessage, setSuccessMessage] = useState('');
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    form.reset();
+    setSuccessMessage('Your appointment request has been submitted successfully!');
+    window.setTimeout(() => setSuccessMessage(''), 5000);
+  };
+
   return (
     <div className="flex flex-col min-h-screen pt-20 pb-16 md:pb-0">
       
@@ -39,7 +50,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Location</h4>
-                    <p className="text-gray-600">123 Dental Way, Suite 100<br/>New York, NY 10001</p>
+                    <p className="text-gray-600">123 Dental Way, Suite 100<br/>Tirupati, AP 517501</p>
                   </div>
                 </div>
 
@@ -83,7 +94,12 @@ export default function Contact() {
               <h3 className="text-3xl font-heading font-bold text-gray-900 mb-2">Book an Appointment</h3>
               <p className="text-gray-500 mb-8">Fill out the form below and our front desk will call you to confirm your desired time slot.</p>
 
-              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-6" onSubmit={handleSubmit}>
+                {successMessage && (
+                  <div className="rounded-2xl border border-green-200 bg-green-50 px-5 py-4 text-sm text-green-800 shadow-sm">
+                    {successMessage}
+                  </div>
+                )}
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-gray-700">First Name</label>
@@ -145,7 +161,7 @@ export default function Contact() {
         <div className="absolute inset-0 bg-gray-200 flex flex-col items-center justify-center text-gray-400">
           <MapPin className="w-12 h-12 mb-2 opacity-50" />
           <p className="font-medium text-lg">Interactive Google Map goes here</p>
-          <p className="text-sm">123 Dental Way, Suite 100, New York, NY 10001</p>
+          <p className="text-sm">123 Dental Way, Suite 100, Tirupati, AP 517501</p>
         </div>
       </section>
 

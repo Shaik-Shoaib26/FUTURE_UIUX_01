@@ -1,8 +1,10 @@
 import { CheckCircle2, ChevronRight, PhoneCall, ArrowRight } from 'lucide-react';
 import { Link, useParams, Navigate } from 'react-router-dom';
 import { SERVICES_DATA } from '../data/services';
+import { useState } from 'react';
 
 export default function ServiceDetail() {
+  const [showMessage, setShowMessage] = useState(false);
   const { serviceId } = useParams<{ serviceId: string }>();
   const service = serviceId ? SERVICES_DATA[serviceId] : null;
 
@@ -140,18 +142,25 @@ export default function ServiceDetail() {
                 <h4 className="text-2xl font-bold text-gray-900 mb-2">Interested?</h4>
                 <p className="text-gray-600 mb-6 text-sm">Schedule a consultation to see if {service.title} is right for you.</p>
                 
-                <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+                <form className="space-y-4" onSubmit={(e) => {
+                  e.preventDefault();
+                  setShowMessage(true);
+                  setTimeout(() => setShowMessage(false), 3000);
+                }}>
                   <div>
-                    <input type="text" placeholder="Full Name" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all" />
+                    <input type="text" placeholder="Full Name" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all" required />
                   </div>
                   <div>
-                    <input type="tel" placeholder="Phone Number" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all" />
+                    <input type="tel" placeholder="Phone Number" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all" required />
                   </div>
                   <div>
                     <button className="w-full py-4 bg-brand-600 text-white rounded-xl font-bold hover:bg-brand-700 transition-colors shadow-md">
-                      Request Consultation
+                      Request Appointment
                     </button>
                   </div>
+                  {showMessage && (
+                    <div className="text-center text-green-600 font-medium animate-pulse">Your appointment request has been submitted successfully!</div>
+                  )}
                   <p className="text-xs text-center text-gray-400 mt-4">We will call you to confirm your appointment time.</p>
                 </form>
 
