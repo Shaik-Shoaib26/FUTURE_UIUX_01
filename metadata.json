@@ -1,0 +1,6 @@
+{
+  "name": "Bright Smile Dental Clinic",
+  "description": "A modern local dental clinic website with appointment bookings, focused on patient trust, mobile usability, and lead generation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
