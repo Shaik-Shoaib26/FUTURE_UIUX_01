@@ -87,7 +87,7 @@ export const SERVICES_DATA: Record<string, ServiceDetailData> = {
     id: "teeth-whitening",
     title: "Teeth Whitening",
     subtitle: "Brighten your smile up to 8 shades in a single clinical session.",
-    img: "https://images.unsplash.com/photo-1661457519725-1ca0863f5f8d?q=80&w=1200&auto=format&fit=crop",
+    img: "https://images.pexels.com/photos/5622271/pexels-photo-5622271.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     whatIsIt: "Professional teeth whitening utilizes safe, concentrated bleaching agents applied directly to your teeth, activated by an LED light to remove deep stains effectively and safely.",
     benefits: [
       "Immediate, visible results",
