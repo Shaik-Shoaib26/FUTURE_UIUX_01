@@ -41,7 +41,7 @@ export const SERVICES_DATA: Record<string, ServiceDetailData> = {
     id: "root-canal",
     title: "Root Canal Treatment",
     subtitle: "Painless root canal treatments by endodontic specialists to save your natural tooth.",
-    img: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800",
+    img: "https://images.unsplash.com/photo-1610312194726-9bc6ddf6d08e?auto=format&fit=crop&q=80&w=800",
     whatIsIt: "A root canal is a treatment to repair and save a badly damaged or infected tooth instead of removing it. The term 'root canal' comes from cleaning of the canals inside a tooth's root.",
     benefits: [
       "Saves your natural tooth",
@@ -87,7 +87,7 @@ export const SERVICES_DATA: Record<string, ServiceDetailData> = {
     id: "teeth-whitening",
     title: "Teeth Whitening",
     subtitle: "Brighten your smile up to 8 shades in a single clinical session.",
-    img: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=800",
+    img: "https://images.pexels.com/photos/16212691/pexels-photo-16212691.png?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     whatIsIt: "Professional teeth whitening utilizes safe, concentrated bleaching agents applied directly to your teeth, activated by an LED light to remove deep stains effectively and safely.",
     benefits: [
       "Immediate, visible results",
@@ -107,7 +107,7 @@ export const SERVICES_DATA: Record<string, ServiceDetailData> = {
     id: "dental-implants",
     title: "Dental Implants",
     subtitle: "Restore your confident smile and bite functionality with permanent, natural-looking dental implants.",
-    img: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=800",
+    img: "https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&q=80&w=800",
     whatIsIt: "A dental implant is a titanium post (acting as a tooth root) that is surgically positioned into the jawbone beneath the gum line. This allows your dentist to mount replacement teeth or a bridge into that area.",
     benefits: [
       "Looks and feels like natural teeth",

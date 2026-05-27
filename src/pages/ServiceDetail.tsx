@@ -52,11 +52,15 @@ export default function ServiceDetail() {
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
-            <div className="hidden md:block">
+            <div className="rounded-2xl overflow-hidden shadow-lg">
               <img 
                 src={service.img} 
-                alt={`${service.title} illustration`} 
-                className="rounded-3xl shadow-xl w-full object-cover aspect-[4/3]"
+                alt={service.title} 
+                className="w-full h-full object-cover aspect-[4/3] transition-transform duration-300 hover:scale-105"
+                loading="eager"
+                onError={(e) => {
+                  e.currentTarget.src = "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800";
+                }}
               />
             </div>
           </div>
