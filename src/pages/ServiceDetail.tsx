@@ -1,12 +1,29 @@
 import { CheckCircle2, ChevronRight, PhoneCall, ArrowRight } from 'lucide-react';
 import { Link, useParams, Navigate } from 'react-router-dom';
 import { SERVICES_DATA } from '../data/services';
-import { useState } from 'react';
+import { useState, FormEvent } from 'react';
 
 export default function ServiceDetail() {
   const [showMessage, setShowMessage] = useState(false);
   const { serviceId } = useParams<{ serviceId: string }>();
   const service = serviceId ? SERVICES_DATA[serviceId] : null;
+
+  const handleRequest = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+    const fullName = fd.get('fullName') || '';
+    const phone = fd.get('phone') || '';
+
+    const message = `Appointment request for ${service?.title}:\nName: ${fullName}\nPhone: ${phone}`;
+    const waNumber = '919030293102';
+    const waLink = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
+    window.open(waLink, '_blank');
+
+    setShowMessage(true);
+    setTimeout(() => setShowMessage(false), 3000);
+    form.reset();
+  };
 
   if (!service) {
     return <Navigate to="/" replace />;
@@ -142,16 +159,12 @@ export default function ServiceDetail() {
                 <h4 className="text-2xl font-bold text-gray-900 mb-2">Interested?</h4>
                 <p className="text-gray-600 mb-6 text-sm">Schedule a consultation to see if {service.title} is right for you.</p>
                 
-                <form className="space-y-4" onSubmit={(e) => {
-                  e.preventDefault();
-                  setShowMessage(true);
-                  setTimeout(() => setShowMessage(false), 3000);
-                }}>
+                <form className="space-y-4" onSubmit={handleRequest}>
                   <div>
-                    <input type="text" placeholder="Full Name" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all" required />
+                    <input name="fullName" type="text" placeholder="Full Name" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all" required />
                   </div>
                   <div>
-                    <input type="tel" placeholder="Phone Number" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all" required />
+                    <input name="phone" type="tel" placeholder="Phone Number" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all" required />
                   </div>
                   <div>
                     <button className="w-full py-4 bg-brand-600 text-white rounded-xl font-bold hover:bg-brand-700 transition-colors shadow-md">

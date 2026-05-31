@@ -7,6 +7,20 @@ export default function Contact() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
+    const fd = new FormData(form);
+    const firstName = fd.get('firstName') || '';
+    const lastName = fd.get('lastName') || '';
+    const phone = fd.get('phone') || '';
+    const email = fd.get('email') || '';
+    const serviceNeeded = fd.get('service') || '';
+    const preferredDate = fd.get('date') || '';
+    const notes = fd.get('notes') || '';
+
+    const message = `New appointment request from Bright Smile website:\nName: ${firstName} ${lastName}\nPhone: ${phone}\nEmail: ${email}\nService: ${serviceNeeded}\nPreferred Date: ${preferredDate}\nNotes: ${notes}`;
+    const waNumber = '919030293102';
+    const waLink = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
+    window.open(waLink, '_blank');
+
     form.reset();
     setSuccessMessage('Your appointment request has been submitted successfully!');
     window.setTimeout(() => setSuccessMessage(''), 5000);
@@ -103,29 +117,29 @@ export default function Contact() {
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-gray-700">First Name</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all shadow-sm" placeholder="John" required />
+                    <input name="firstName" type="text" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all shadow-sm" placeholder="John" required />
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-gray-700">Last Name</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all shadow-sm" placeholder="Doe" required />
+                    <input name="lastName" type="text" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all shadow-sm" placeholder="Doe" required />
                   </div>
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-gray-700">Phone Number</label>
-                    <input type="tel" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all shadow-sm" placeholder="(555) 000-0000" required />
+                    <input name="phone" type="tel" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all shadow-sm" placeholder="(555) 000-0000" required />
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-gray-700">Email Address (Optional)</label>
-                    <input type="email" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all shadow-sm" placeholder="john@example.com" />
+                    <input name="email" type="email" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all shadow-sm" placeholder="john@example.com" />
                   </div>
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-gray-700">Service Needed</label>
-                    <select className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all shadow-sm bg-white cursor-pointer" required>
+                    <select name="service" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all shadow-sm bg-white cursor-pointer" required>
                       <option value="">Select a service...</option>
                       <option value="cleaning">General Checkup & Cleaning</option>
                       <option value="pain">Tooth Pain / Root Canal</option>
@@ -137,13 +151,13 @@ export default function Contact() {
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-gray-700">Preferred Date</label>
-                    <input type="date" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all shadow-sm text-gray-700 cursor-pointer" required />
+                    <input name="date" type="date" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all shadow-sm text-gray-700 cursor-pointer" required />
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-gray-700">Additional Notes (Optional)</label>
-                  <textarea rows={4} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all shadow-sm resize-none" placeholder="Any specific concerns or symptoms?"></textarea>
+                  <textarea name="notes" rows={4} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all shadow-sm resize-none" placeholder="Any specific concerns or symptoms?"></textarea>
                 </div>
 
                 <button type="submit" className="w-full py-4 bg-brand-600 text-white rounded-xl font-bold text-lg hover:bg-brand-700 transition-colors shadow-lg hover:shadow-xl hover:-translate-y-0.5">
