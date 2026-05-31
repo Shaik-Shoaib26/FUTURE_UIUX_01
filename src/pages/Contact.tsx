@@ -39,7 +39,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
-                    <p className="text-brand-700 font-medium text-lg hover:underline"><a href="tel:+919876543210">(+91) 98765 43210</a></p>
+                    <p className="text-brand-700 font-medium text-lg hover:underline"><a href="tel:+919030293102">9030293102</a></p>
                     <p className="text-sm text-gray-500 mt-1">Available Mon-Sat for calls.</p>
                   </div>
                 </div>

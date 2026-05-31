@@ -41,7 +41,7 @@ export default function Home() {
                   <Calendar className="w-5 h-5" />
                   Book Appointment
                 </Link>
-                <a href="tel:+15551234567" className="inline-flex justify-center items-center gap-2 px-8 py-4 rounded-full bg-white text-brand-700 border-2 border-brand-200 font-semibold text-lg hover:bg-brand-50 hover:border-brand-300 transition-all">
+                <a href="tel:+919030293102" className="inline-flex justify-center items-center gap-2 px-8 py-4 rounded-full bg-white text-brand-700 border-2 border-brand-200 font-semibold text-lg hover:bg-brand-50 hover:border-brand-300 transition-all">
                   <PhoneCall className="w-5 h-5" />
                   Call Now
                 </a>

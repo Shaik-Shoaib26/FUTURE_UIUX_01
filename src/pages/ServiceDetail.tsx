@@ -166,9 +166,9 @@ export default function ServiceDetail() {
 
                 <div className="mt-8 pt-6 border-t border-gray-100 text-center">
                   <p className="text-sm font-medium text-gray-500 mb-3">Or call us immediately for urgent queries</p>
-                  <a href="tel:+919876543210" className="inline-flex items-center gap-2 text-brand-600 font-bold text-lg hover:text-brand-700">
+                  <a href="tel:+919030293102" className="inline-flex items-center gap-2 text-brand-600 font-bold text-lg hover:text-brand-700">
                     <PhoneCall className="w-5 h-5" />
-                    (+91) 98765 43210
+                    9030293102
                   </a>
                 </div>
               </div>

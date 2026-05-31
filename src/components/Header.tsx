@@ -28,9 +28,9 @@ export default function Header() {
             <Link to="/service/teeth-cleaning" className="text-gray-600 hover:text-brand-600 font-medium transition-colors">Services</Link>
             <Link to="/contact" className="text-gray-600 hover:text-brand-600 font-medium transition-colors">Contact</Link>
             
-            <a href="tel:+1234567890" className="flex items-center gap-2 text-brand-600 font-semibold px-4 py-2 rounded-full border-2 border-brand-100 hover:bg-brand-50 transition-colors">
+            <a href="tel:+919030293102" className="flex items-center gap-2 text-brand-600 font-semibold px-4 py-2 rounded-full border-2 border-brand-100 hover:bg-brand-50 transition-colors">
               <Phone className="w-4 h-4" />
-              (555) 123-4567
+              9030293102
             </a>
             
             <Link to="/contact" className="px-6 py-2.5 bg-brand-600 text-white font-medium rounded-full hover:bg-brand-700 shadow-md transition-all hover:shadow-lg transform hover:-translate-y-0.5">
@@ -77,9 +77,9 @@ export default function Header() {
             </Link>
             
             <div className="mt-4 pt-4 border-t border-gray-100 px-3 flex flex-col gap-3">
-              <a href="tel:+1234567890" className="flex items-center justify-center gap-2 text-brand-600 font-semibold px-4 py-3 rounded-xl border-2 border-brand-100 bg-brand-50">
+              <a href="tel:+919030293102" className="flex items-center justify-center gap-2 text-brand-600 font-semibold px-4 py-3 rounded-xl border-2 border-brand-100 bg-brand-50">
                 <Phone className="w-5 h-5" />
-                Call (555) 123-4567
+                Call 9030293102
               </a>
               <Link 
                 to="/contact" 
